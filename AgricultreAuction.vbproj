@@ -137,7 +137,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\Auction.mdf" />
+    <Content Include="App_Data\Auction_log.ldf">
+      <DependentUpon>Auction.mdf</DependentUpon>
+    </Content>
     <Content Include="Auction.aspx" />
+    <Content Include="AuctionDetail.aspx" />
+    <Content Include="AuctionView.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -146,6 +152,8 @@
     <Content Include="Content\images\musturd.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="FarmerLogin.aspx" />
+    <Content Include="FarmerSignup.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -158,6 +166,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="MerchantLogin.aspx" />
+    <Content Include="ProOnSaleView.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -207,6 +217,20 @@
       <DependentUpon>Auction.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="AuctionDetail.aspx.designer.vb">
+      <DependentUpon>AuctionDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionDetail.aspx.vb">
+      <DependentUpon>AuctionDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AuctionView.aspx.designer.vb">
+      <DependentUpon>AuctionView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionView.aspx.vb">
+      <DependentUpon>AuctionView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
@@ -221,8 +245,29 @@
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FarmerLogin.aspx.designer.vb">
+      <DependentUpon>FarmerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FarmerLogin.aspx.vb">
+      <DependentUpon>FarmerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FarmerSignup.aspx.designer.vb">
+      <DependentUpon>FarmerSignup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FarmerSignup.aspx.vb">
+      <DependentUpon>FarmerSignup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantLogin.aspx.designer.vb">
+      <DependentUpon>MerchantLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantLogin.aspx.vb">
+      <DependentUpon>MerchantLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -242,6 +287,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ProOnSaleView.aspx.designer.vb">
+      <DependentUpon>ProOnSaleView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProOnSaleView.aspx.vb">
+      <DependentUpon>ProOnSaleView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
@@ -296,9 +348,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
